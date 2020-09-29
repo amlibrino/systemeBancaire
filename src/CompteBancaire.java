@@ -1,10 +1,10 @@
-public class CompteBanquaire {
+public class CompteBancaire implements Comparable{
 
 
     private int numDeCompte;
     private int soldeCompte; // argent dans son compte bancaire; en euro
 
-    public CompteBanquaire(int numDeCompte, int soldeCompte) {
+    public CompteBancaire(int numDeCompte, int soldeCompte) {
         this.numDeCompte = numDeCompte;
         this.soldeCompte = soldeCompte;
     }
@@ -40,4 +40,13 @@ public class CompteBanquaire {
     }
 
 
+    @Override
+    public int compareTo(Object o) {
+        int difference_de_solde = soldeCompte - ((CompteBancaire) o).soldeCompte;
+        if (difference_de_solde == 0){
+            return numDeCompte - ((CompteBancaire)o).numDeCompte;
+        }
+        return difference_de_solde;
+
+    }
 }

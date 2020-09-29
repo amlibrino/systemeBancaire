@@ -25,4 +25,10 @@ public class Agent extends Personne{
     public Agence getAgence() {
         return agence;
     }
+
+    @Override
+    public int compareTo(Object o) {
+        return  agence.getNbEtoile() - ((Agence)o).getNbEtoile();
+
+    }
 }
