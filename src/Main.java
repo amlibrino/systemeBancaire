@@ -12,7 +12,7 @@ public class Main {
         List<Client> clients = new LinkedList<>();
 
 
-        Agence bnp = new Agence("paris",  List<Personne> employes, "de 8h à 18h", List<Client> clients);
+        Agence bnp = new Agence("paris",employes, "de 8h à 18h", clients, 5);
 
     }
 }
