@@ -8,7 +8,7 @@ public class Agence {
     private String horaires;
     // private LocalDateTime heureOuverture;
     private List<Client> clients;
-    // private List<CompteBancaire> compteBancaires;
+    private List<CompteBancaire> compteBancaires;
     private Map<Integer, CompteBancaire> compteBancaireById;
 
     //constructor
